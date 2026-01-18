@@ -19,14 +19,11 @@ body {
 
 h1 {
     text-align: left;
-    /* 下の線を消しました */
-    border-bottom: none;
-    /* 線がなくなったので、下の余白を調整しました */
-    padding-bottom: 0;
+    /* !important をつけて、他の設定を強制的に上書きして消します */
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
     margin-bottom: 20px;
-    /* 文字の大きさを調整（必要に応じて数値を変更してください） */
     font-size: 2.2rem;
-    /* 文字の濃さ（太さ）を最大級に設定しました */
     font-weight: 900;
 }
 
