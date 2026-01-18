@@ -1,4 +1,4 @@
-/* 全体の背景や文字のデザイン */
+/* 全体のデザイン設定 */
 body {
     background-color: #f5f5f5;
     color: #333333;
@@ -8,7 +8,6 @@ body {
     padding: 0;
 }
 
-/* コンテンツを中央に寄せる設定 */
 .container {
     background-color: #ffffff;
     max-width: 800px;
@@ -18,7 +17,6 @@ body {
     border-radius: 8px;
 }
 
-/* 見出しのデザイン */
 h1 {
     text-align: center;
     border-bottom: 2px solid #333333;
@@ -34,7 +32,24 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* リストのデザイン */
+/* ここが重要：第1条のリスト設定 */
+.terms-list {
+    /* 数字を文の外側に配置する（2行目が数字の下に回り込まなくなります） */
+    list-style-position: outside;
+    /* 左側に余白を作って、数字を表示するスペースを確保します */
+    padding-left: 2em; 
+    /* リスト全体の余白を調整 */
+    margin: 10px 0;
+}
+
+.terms-list li {
+    /* 1つ1つの項目の下に隙間を作ります */
+    margin-bottom: 10px;
+    /* 番号の後に少しスペースを入れる（任意） */
+    padding-left: 0.5em;
+}
+
+/* 箇条書き（第2条など）の設定 */
 ul {
     padding-left: 20px;
 }
@@ -43,7 +58,6 @@ li {
     margin-bottom: 10px;
 }
 
-/* ページ下部の日付部分 */
 .footer {
     margin-top: 50px;
     text-align: right;
