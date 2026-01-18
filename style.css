@@ -48,6 +48,7 @@ h2 {
     margin-bottom: 10px;
     /* 番号の後に少しスペースを入れる（任意） */
     padding-left: 0.5em;
+    text-align: left;
 }
 
 /* 箇条書き（第2条など）の設定 */
@@ -61,7 +62,7 @@ li {
 
 .footer {
     margin-top: 50px;
-    text-align: right;
+    text-align: left;
     font-size: 0.9rem;
     color: #666666;
 }
