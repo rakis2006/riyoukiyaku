@@ -51,6 +51,13 @@ h2 {
     text-align: left;
 }
 
+.terms-list li strong {
+    /* 右側に少しだけ（文字の3割分ほど）隙間を作ります */
+    margin-right: 0.3em; 
+    /* 文字の色をよりはっきりさせる設定（お好みで） */
+    color: #000000;
+}
+
 /* 子リスト（・の部分）の設定 */
 .terms-list ul {
     list-style-type: none;
