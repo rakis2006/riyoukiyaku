@@ -45,7 +45,7 @@ h2 {
 
 .terms-list li {
     /* 1. と 2. の間の縦の隙間を少し詰めました（15px → 10px） */
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     /* 「1.」のすぐ後の空白を小さくしました（1em → 0.3em） */
     padding-left: 0.3em; 
     text-align: left;
@@ -57,7 +57,7 @@ h2 {
     padding-left: 0; 
     /* 本文と「・」の間の上下の空間を最小限にしました */
     margin-top: 2px; 
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 .terms-list ul li {
