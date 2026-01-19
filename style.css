@@ -1,4 +1,3 @@
-/* 全体のデザイン設定 */
 body {
     background-color: #f5f5f5;
     color: #333333;
@@ -30,13 +29,12 @@ h2 {
     font-size: 1.2rem;
     border-left: none !important;
     padding-left: 0 !important;
-    margin-top: 30px; /* 少し上に詰めました */
+    margin-top: 30px;
     margin-bottom: 10px;
     text-align: left;
     font-weight: 800;
 }
 
-/* 親リスト（1. 2.）の設定 */
 .terms-list {
     list-style-position: outside;
     padding-left: 2em; 
@@ -44,42 +42,33 @@ h2 {
 }
 
 .terms-list li {
-    /* 1. と 2. の間の縦の隙間を少し詰めました（15px → 10px） */
     margin-bottom: 5px;
-    /* 「1.」のすぐ後の空白を小さくしました（1em → 0.3em） */
     padding-left: 0.3em; 
     text-align: left;
 }
 
 .terms-list li strong {
-    /* 右側に少しだけ（文字の3割分ほど）隙間を作ります */
     margin-right: 0.3em; 
-    /* 文字の色をよりはっきりさせる設定（お好みで） */
     color: #000000;
 }
 
-/* 子リスト（・の部分）の設定 */
 .terms-list ul {
     list-style-type: none;
     padding-left: 0; 
-    /* 本文と「・」の間の上下の空間を最小限にしました */
     margin-top: 2px; 
     margin-bottom: 2px;
 }
 
 .terms-list ul li {
-    /* 「・」が並ぶ時の行間を少し詰めました */
     margin-bottom: 2px;
     padding-left: 1.5em; 
     text-align: left;
     position: relative; 
 }
 
-/* 疑似要素で「・」を表示 */
 .terms-list ul li::before {
     content: "・"; 
     position: absolute;
-    /* 「・」の位置を微調整 */
     left: 0.2em; 
     font-weight: bold;
 }
