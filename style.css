@@ -28,9 +28,7 @@ h1 {
 
 h2 {
     font-size: 1.2rem;
-    /* 左の青い線を完全に消しました */
     border-left: none !important;
-    /* 線を消した分、左の余白も0に調整しました */
     padding-left: 0 !important;
     margin-top: 40px;
     margin-bottom: 10px;
@@ -41,32 +39,44 @@ h2 {
 /* 親リスト（1. 2.）の設定 */
 .terms-list {
     list-style-position: outside;
-    /* リスト全体の左側の位置を調整 */
     padding-left: 2.5em; 
     margin: 10px 0;
 }
 
 .terms-list li {
     margin-bottom: 15px;
-    /* ここが重要：番号の直後の空白を広げる設定 */
+    /* 1. と本文の間の空白 */
     padding-left: 1em; 
     text-align: left;
 }
 
 /* 子リスト（・の部分）の設定 */
 .terms-list ul {
-    list-style-type: "・";
-    /* 子リストの左側インデント */
-    padding-left: 1.5em;
+    /* 標準の記号を完全に消します */
+    list-style-type: none;
+    padding-left: 0; 
     margin-top: 5px;
     margin-bottom: 10px;
 }
 
 .terms-list ul li {
     margin-bottom: 5px;
-    /* ここが重要：・の直後の空白を広げる設定 */
-    padding-left: 1em;
-    list-style-position: outside;
+    /* 本文を記号の分だけ右にずらします */
+    padding-left: 2em; 
+    text-align: left;
+    /* 記号を置くための基準点になります */
+    position: relative; 
+}
+
+/* 疑似要素で「・」を確実に表示させます */
+.terms-list ul li::before {
+    /* 表示する文字 */
+    content: "・"; 
+    /* 場所を固定します */
+    position: absolute;
+    /* 常に左端から 0.5em の場所に置きます */
+    left: 0.5em; 
+    font-weight: bold;
 }
 
 .footer {
