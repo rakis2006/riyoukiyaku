@@ -30,7 +30,7 @@ h2 {
     font-size: 1.2rem;
     border-left: none !important;
     padding-left: 0 !important;
-    margin-top: 40px;
+    margin-top: 30px; /* 少し上に詰めました */
     margin-bottom: 10px;
     text-align: left;
     font-weight: 800;
@@ -39,45 +39,46 @@ h2 {
 /* 親リスト（1. 2.）の設定 */
 .terms-list {
     list-style-position: outside;
-    padding-left: 2.5em; 
+    padding-left: 2em; 
     margin: 10px 0;
 }
 
 .terms-list li {
-    margin-bottom: 15px;
-    /* 1. と本文の間の空白 */
-    padding-left: 1em; 
+    /* 1. と 2. の間の縦の隙間を少し詰めました（15px → 10px） */
+    margin-bottom: 10px;
+    /* 「1.」のすぐ後の空白を小さくしました（1em → 0.3em） */
+    padding-left: 0.3em; 
     text-align: left;
 }
 
 /* 子リスト（・の部分）の設定 */
 .terms-list ul {
-    /* 標準の記号を完全に消します */
     list-style-type: none;
     padding-left: 0; 
-    margin-top: 5px;
+    /* 本文と「・」の間の上下の空間を最小限にしました */
+    margin-top: 2px; 
+    margin-bottom: 5px;
 }
 
 .terms-list ul li {
-
-    /* 本文を記号の分だけ右にずらします */
+    /* 「・」が並ぶ時の行間を少し詰めました */
+    margin-bottom: 2px;
+    padding-left: 1.5em; 
     text-align: left;
-    /* 記号を置くための基準点になります */
     position: relative; 
 }
 
-/* 疑似要素で「・」を確実に表示させます */
+/* 疑似要素で「・」を表示 */
 .terms-list ul li::before {
-    /* 表示する文字 */
     content: "・"; 
-    /* 場所を固定します */
     position: absolute;
-    /* 常に左端から 0.5em の場所に置きます */
+    /* 「・」の位置を微調整 */
+    left: 0.2em; 
     font-weight: bold;
 }
 
 .footer {
-    margin-top: 50px;
+    margin-top: 40px;
     text-align: left;
     font-size: 0.9rem;
     color: #666666;
