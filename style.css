@@ -19,7 +19,7 @@ body {
 
 h1 {
     text-align: left;
-    /* !important をつけて、他の設定を強制的に上書きして消します */
+    /* 下の線を強制的に消す設定 */
     border-bottom: none !important;
     padding-bottom: 0 !important;
     margin-bottom: 20px;
@@ -33,9 +33,11 @@ h2 {
     margin-top: 40px;
     margin-bottom: 10px;
     text-align: left;
+    /* 以前の設定で線が残っている場合はここも確認 */
+    border-left: 5px solid #007bff;
 }
 
-/* 第1条のリスト設定 */
+/* 親リスト（1. 2.）の設定 */
 .terms-list {
     list-style-position: outside;
     padding-left: 2em; 
@@ -43,18 +45,26 @@ h2 {
 }
 
 .terms-list li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding-left: 0.5em;
-    text-align: left;
+    font-weight: normal;
 }
 
-/* 箇条書きの設定 */
-ul {
-    padding-left: 20px;
-}
-
-li {
+/* 子リスト（・の部分）の設定 */
+.terms-list ul {
+    /* 記号を「・」に指定します */
+    list-style-type: "・ ";
+    padding-left: 1.2em;
+    margin-top: 5px;
     margin-bottom: 10px;
+}
+
+.terms-list ul li {
+    /* 子リスト内の文字の太さや余白を調整 */
+    font-weight: normal;
+    margin-bottom: 5px;
+    /* 2行目以降も「・」の下に文字が来ないように設定 */
+    list-style-position: outside;
 }
 
 .footer {
