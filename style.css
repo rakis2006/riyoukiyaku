@@ -60,7 +60,7 @@ h2 {
 }
 
 .terms-list ul li {
-    margin-bottom: 5px;
+
     /* 本文を記号の分だけ右にずらします */
     padding-left: 2em; 
     text-align: left;
