@@ -62,7 +62,6 @@ h2 {
 .terms-list ul li {
 
     /* 本文を記号の分だけ右にずらします */
-    padding-left: 2em; 
     text-align: left;
     /* 記号を置くための基準点になります */
     position: relative; 
@@ -75,7 +74,6 @@ h2 {
     /* 場所を固定します */
     position: absolute;
     /* 常に左端から 0.5em の場所に置きます */
-    left: 0.5em; 
     font-weight: bold;
 }
 
