@@ -19,7 +19,6 @@ body {
 
 h1 {
     text-align: left;
-    /* 下の線を強制的に消す設定 */
     border-bottom: none !important;
     padding-bottom: 0 !important;
     margin-bottom: 20px;
@@ -29,41 +28,44 @@ h1 {
 
 h2 {
     font-size: 1.2rem;
-    padding-left: 15px;
+    /* 左の青い線を完全に消しました */
+    border-left: none !important;
+    /* 線を消した分、左の余白も0に調整しました */
+    padding-left: 0 !important;
     margin-top: 40px;
     margin-bottom: 10px;
     text-align: left;
-    /* 以前の設定で線が残っている場合はここも確認 */
-    border-left: 5px solid #007bff;
+    font-weight: 800;
 }
 
 /* 親リスト（1. 2.）の設定 */
 .terms-list {
     list-style-position: outside;
-    padding-left: 2em; 
+    /* リスト全体の左側の位置を調整 */
+    padding-left: 2.5em; 
     margin: 10px 0;
 }
 
 .terms-list li {
     margin-bottom: 15px;
-    padding-left: 0.5em;
-    font-weight: normal;
+    /* ここが重要：番号の直後の空白を広げる設定 */
+    padding-left: 1em; 
+    text-align: left;
 }
 
 /* 子リスト（・の部分）の設定 */
 .terms-list ul {
-    /* 記号を「・」に指定します */
-    list-style-type: "・ ";
-    padding-left: 1.2em;
+    list-style-type: "・";
+    /* 子リストの左側インデント */
+    padding-left: 1.5em;
     margin-top: 5px;
     margin-bottom: 10px;
 }
 
 .terms-list ul li {
-    /* 子リスト内の文字の太さや余白を調整 */
-    font-weight: normal;
     margin-bottom: 5px;
-    /* 2行目以降も「・」の下に文字が来ないように設定 */
+    /* ここが重要：・の直後の空白を広げる設定 */
+    padding-left: 1em;
     list-style-position: outside;
 }
 
